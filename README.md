@@ -1,4 +1,4 @@
-Mini project 주제
+##Mini project 주제
 
 <img width="659" alt="스크린샷 2021-05-02 오전 12 16 38" src="https://user-images.githubusercontent.com/79801529/116786952-748f2f80-aadc-11eb-949a-86179ef078f7.png">
 
