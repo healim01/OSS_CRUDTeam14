@@ -1,6 +1,6 @@
 Mini project 주제
 
-[Uploading image.png…]()
+https://cdn.aitimes.kr/news/photo/202011/18323_20066_2638.jpg
 
 
 한동대학교 학교 생활에 필수적인 부분을 관리하는 프로그램으로써 
