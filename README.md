@@ -1,5 +1,7 @@
 Mini project 주제
-![Uploading image.png…]()
+
+[Uploading image.png…]()
+
 
 한동대학교 학교 생활에 필수적인 부분을 관리하는 프로그램으로써 
 학생들의 정보를 통해 1년간 공동체 생활을 할 팀을 정하도록 한다. 뿐만 아니라
