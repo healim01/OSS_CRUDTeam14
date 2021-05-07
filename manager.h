@@ -27,10 +27,10 @@ int loadData(Person *p); // 데이타 읽어오기
 
 
 // SEARCH
-void searchName(Person *p[], int num); // 이름으로 검색
-void searchid(Person *p[], int num); // 학번으로 검색
-void searchmajor(Person *p[], int num); // 전공으로 검색 
-void searchgrade(Person *p[], int num); // 학년으로 검색 
+void searchName(Person *p, int num); // 이름으로 검색
+void searchid(Person *p, int num); // 학번으로 검색
+void searchmajor(Person *p, int num); // 전공으로 검색 
+void searchgrade(Person *p, int num); // 학년으로 검색 
 
 // TEAM
-int makeTeam(Person *p[], int num);
+int makeTeam(Person *p, int num);
