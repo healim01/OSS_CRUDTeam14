@@ -6,11 +6,11 @@ typedef struct{
 	int id; // 학번
 	int grade; // 학년
     char major[60]; // 전공
-    char domi[60]; // 기숙사
+    char RC[60]; // RC
     int team; // 팀 번호
 } Person;
 
-// SELET
+// SELECT
 int selectMenu(); // 메뉴 선택 
 int selectDataNo(Person *p, int num); // 번호 선택
 
