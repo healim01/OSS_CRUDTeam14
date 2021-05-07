@@ -32,7 +32,7 @@ int selectDatNo(Person *p, int num) {
 }
 
 // CRUD
-int createProduct(Person *p) {
+int createPerson(Person *p) {
     getchar();
     printf("이름: ");
     fgets(p->name,60,stdin);
@@ -50,3 +50,24 @@ int createProduct(Person *p) {
 
     return 1;
 }
+
+
+int createPerson(Person *p) {
+    getchar();
+    printf("이름: ");
+    fgets(p->name,60,stdin);
+    p->name[strlen(p->name)-1] = '\0';
+    printf("학번: ");
+    scanf("%d",&p->id);
+    printf("학년: ");
+    scanf("%d",&p->grade);
+    printf("전공: ");
+    fgets(p->major,60,stdin);
+    p->major[strlen(p->major)-1] = '\0';
+    printf("RC: ");
+    scanf("%s",p->RC);
+    printf("=> 수정 완료!\n");
+
+    return 1;
+}
+
