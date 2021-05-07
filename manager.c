@@ -21,3 +21,11 @@ int selectMenu(){
     scanf("%d", &menu);
     return menu;
 }
+
+int selectDatNo(Person *p, int num) {
+    int no;
+    listProduct(p, num);
+    printf("번호는 (취소 :0)? ");
+    scanf("%d", &no);
+    return no;
+}
