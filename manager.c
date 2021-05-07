@@ -5,7 +5,7 @@
 
 int selectMenu(){
     int menu;
-    printf("\n*** Handong Global University ***\n");
+    printf("\n*** Handong Global University ***\n\n");
     printf("1. 학생 정보 조회\n");
     printf("2. 학생 정보 추가\n");
     printf("3. 학생 정보 수정\n");
@@ -24,7 +24,7 @@ int selectMenu(){
 
 int selectDatNo(Person *p, int num) {
     int no;
-    listProduct(p, num);
+    // listPreson(p, num); -- listPerson 함수 부재로 주석 처리
     printf("번호는 (취소 :0)? ");
     scanf("%d", &no);
     return no;
