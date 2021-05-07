@@ -52,7 +52,7 @@ int createPerson(Person *p) {
 }
 
 
-int createPerson(Person *p) {
+int updatePerson(Person *p) {
     getchar();
     printf("이름: ");
     fgets(p->name,60,stdin);
