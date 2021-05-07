@@ -51,6 +51,10 @@ int createPerson(Person *p) {
     return 1;
 }
 
+void readPerson(person *p){
+    printf("\t%s\t%f\t%f\t%s\t%s\n",p->Name,p->id,p->grade,p->majaor,p->RC);
+}
+
 
 int updatePerson(Person *p) {
     getchar();
@@ -69,5 +73,20 @@ int updatePerson(Person *p) {
     printf("=> 수정 완료!\n");
 
     return 1;
+};
+
+int deletePerson(Person *p){
+    p->name= -1;
+    p->id= -1;
+    p->grade= -1;
+    p->major= -1;
+    p->RC= -1;
+    return 1;
 }
+
+
+
+    
+
+
 
