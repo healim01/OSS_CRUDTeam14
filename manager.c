@@ -84,6 +84,40 @@ int deletePerson(Person *p){
     return 1;
 }
 
+<<<<<<< HEAD
+    srand(time(0));
+    printf("어떤 RC의 팀을 선정할까요?\n");
+    printf("1. 토레이   2. 벧엘   3. 로뎀   4. 장기려   5. 카이퍼\n");
+    scanf("%d",&num);
+
+    for (int i=0;i<num;i++) {
+        if (p[i]->RC == num-1) {
+            grade[p[i]->grade] = i;
+            gNum[p[i]->grade]++;
+            count++;
+        }
+    }
+    printf("해당 RC에는 총 %d명이 있습니다. 몇 팀으로 나눌까요?\n");
+    scanf("%d",&team);
+
+    for (int i=0;i<team;i++) {
+        tNum = count / team;
+
+        while (1) {
+            rNum[k] = rand()%count;
+            for (int j=0;j<k;j++) {
+                if (rNum[k]==rNum[j]) {
+                    k--;
+                    break;
+                }
+            }
+        }
+    }
+
+
+}
+   
+
 void listPerson(person *p,int num){
     printf("\nNo. Name id grade major Rc\n");
     printf("================================");
