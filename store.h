@@ -17,7 +17,7 @@ int selectDataNo(Product *p[], int num); // 번호 선택
 int createProduct(Product *p); // 제품 추가하기
 void readProduct(Product *p); // 제품 읽어오기
 int updateProduct(Product *p); // 제품 수정하기   
-int deleteProduct(Product *p); // 제품 삭제하기       
+int deleteProduct(Product *p, int no); // 제품 삭제하기       
 void listProduct(Product *p,int count); // 제품 리스트 가져오기
 
 // FILE

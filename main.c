@@ -1,11 +1,11 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-#include "manager.h"
+#include "store.h"
 
 int main(){
 
-    Person *p[20];
+    Product *p[50];
     int menu;
     int num=0;
     int no, del;
@@ -18,11 +18,11 @@ int main(){
         if (menu == 0) break;
         if (menu == 1) {
             if (num == 0 ) printf("데이터가 없습니다.\n"); 
-            else listPerson(p,num);
+            else listProduct(p,num);
         }
         else if (menu == 2)  {
-            p[num] = (Person *)malloc(sizeof(Person));
-            num += createPerson(p[num]);
+            p[num] = (Product *)malloc(sizeof(Product));
+            num += createProduct(p[num]);
         }
         else if (menu == 3) {
             if (num == 0 ) printf("데이터가 없습니다.\n");
@@ -31,19 +31,19 @@ int main(){
                 printf("=> 취소됨!\n");
                 continue;
             }
-            updatePerson(p[no-1]);
+            updateProduct(p[no-1]);
         }
         else if (menu == 4) {
             if (num == 0 ) printf("데이터가 없습니다.\n");
             no = selectDataNo(p, num);
-            if(no == 0){
+            if (no == 0){
                 printf("=> 취소됨!\n");
                 continue;
             }
             printf("정말로 삭제하시겠습니까?(삭제:1) ");
             scanf("%d",&del);
             if (del==1) {
-                deletePerson(p,no);
+                deleteProduct(p,no);
                 printf("=> 삭제됨!\n");
             }
         } /*
@@ -57,19 +57,15 @@ int main(){
         }
         else if (menu == 7) {
             if (num == 0 ) printf("데이터가 없습니다.\n");
-            else searchid(p,num);
+            else searchType(p,num);
         }
         else if (menu == 8) {
             if (num == 0 ) printf("데이터가 없습니다.\n");
-            else searchmajor(p,num);
-        }
-        else if (menu == 9) {
-            if (num == 0 ) printf("데이터가 없습니다.\n");
-            else searchgrade(p,num);
+            else searchPrice(p,num);
         } */
         else if (menu == 8) {
             if (num == 0 ) printf("데이터가 없습니다.\n");
-            else makeTeam(p,num);
+            else managerStore(p,num);
         }
         else break;
     }
