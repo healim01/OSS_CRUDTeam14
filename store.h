@@ -2,7 +2,7 @@
 #include <string.h>
 
 typedef struct{
-    int type; // 제품 종류
+    int type; // 제품 종류 ( 1. 음료  2. 과자  3. 라면  4. 밥,죽 )
 	char name[60]; // 제품 이름
 	int price; // 제품 가격
 	int wight; // 제품 무게 
