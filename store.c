@@ -22,9 +22,9 @@ int selectMenu(){
     return menu;
 }
 
-int selectDatNo(Product *p[], int num) {
+int selectNum(Product *p[], int num) {
     int no;
-    // listPerson(p, num); -- list 함수 부재
+    listProduct(p, num);
     printf("번호는 (취소 :0)? ");
     scanf("%d", &no);
     return no;
@@ -33,9 +33,10 @@ int selectDatNo(Product *p[], int num) {
 // CRUD
 int createProduct(Product *p) {
     getchar();
-    printf("제품 종류  ");
-    printf(" ( 1. 음료  2. 과자  3. 라면  4. 밥,죽 ): \n");
+    printf("제품 종류 ");
+    printf("(1. 음료  2. 과자  3. 라면  4. 밥,죽): ");
     scanf("%d",&p->type);
+    getchar();
     printf("제품 이름: ");
     fgets(p->name,60,stdin);
     p->name[strlen(p->name)-1] = '\0';
@@ -44,7 +45,7 @@ int createProduct(Product *p) {
     printf("제품 무게: ");
     scanf("%d",&p->wight);
     printf("제품 재고 개수: ");
-    scanf("%s",p->count);
+    scanf("%d",&p->count);
     printf("=> 추가 완료!\n");
 
     return 1;
@@ -55,6 +56,7 @@ int updateProduct(Product *p) {
     printf("제품 종류  ");
     printf(" ( 1. 음료  2. 과자  3. 라면  4. 밥,죽 ): \n");
     scanf("%d",&p->type);
+    getchar();
     printf("제품 이름: ");
     fgets(p->name,60,stdin);
     p->name[strlen(p->name)-1] = '\0';
@@ -63,8 +65,18 @@ int updateProduct(Product *p) {
     printf("제품 무게: ");
     scanf("%d",&p->wight);
     printf("제품 재고 개수: ");
-    scanf("%s",p->count);
+    scanf("%d",&p->count);
     printf("=> 수정 완료!\n");
 
     return 1;
+}
+
+void listProduct(Product *p[],int num) {
+    printf("*******************************\n");
+    for (int i=0; i<num; i++) {
+        //if(p[i] == NULL) continue;
+        printf("%d. ",i+1);
+        //readProduct(*p[i]);
+    }
+    printf("\n");
 }

@@ -7,10 +7,10 @@ int main(){
 
     Product *p[50];
     int menu;
-    int num=0;
-    int no, del;
+    int num = 0;
+    int no ; //, del;
 
-    //num = loadData(p);  -- load 함수 부재로 주석 처리 
+    // num = loadData(p);  -- load 함수 부재로 주석 처리 
     if (num == 0) printf("=> 파일 없음\n");
     else printf("=> 로딩 성공!\n");
     while (1){
@@ -18,7 +18,7 @@ int main(){
         if (menu == 0) break;
         if (menu == 1) {
             if (num == 0 ) printf("데이터가 없습니다.\n"); 
-            else listProduct(p,num);
+            // else listProduct(p,num);
         }
         else if (menu == 2)  {
             p[num] = (Product *)malloc(sizeof(Product));
@@ -26,13 +26,14 @@ int main(){
         }
         else if (menu == 3) {
             if (num == 0 ) printf("데이터가 없습니다.\n");
-            no = selectDataNo(p,num);
+            no = selectNum(p,num);
             if(no == 0){
                 printf("=> 취소됨!\n");
                 continue;
             }
             updateProduct(p[no-1]);
         }
+        /*
         else if (menu == 4) {
             if (num == 0 ) printf("데이터가 없습니다.\n");
             no = selectDataNo(p, num);
@@ -45,8 +46,8 @@ int main(){
             if (del==1) {
                 deleteProduct(p,no);
                 printf("=> 삭제됨!\n");
-            }
-        } /*
+            } 
+        } */ /*
         else if (menu == 5) {
             if (num == 0 ) printf("데이터가 없습니다.\n");
             else saveData(p,num);
@@ -65,7 +66,7 @@ int main(){
         } */
         else if (menu == 8) {
             if (num == 0 ) printf("데이터가 없습니다.\n");
-            else managerStore(p,num);
+            //else managerStore(p,num);
         }
         else break;
     }
