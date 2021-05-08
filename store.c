@@ -80,3 +80,12 @@ void listProduct(Product *p[],int num) {
     }
     printf("\n");
 }
+
+void managerStore(Product *p[], int num) {
+    printf("===============\n");
+    printf("남은 재고\n");
+    for (int i=0;i<num;i++) {
+        printf("%d. %s %d개\n",i+1,p[i]->name,p[i]->count);
+    }
+}
+

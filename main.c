@@ -64,9 +64,9 @@ int main(){
             if (num == 0 ) printf("데이터가 없습니다.\n");
             else searchPrice(p,num);
         } */
-        else if (menu == 8) {
+        else if (menu ==9) {
             if (num == 0 ) printf("데이터가 없습니다.\n");
-            //else managerStore(p,num);
+            else managerStore(p,num);
         }
         else break;
     }
