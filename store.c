@@ -34,7 +34,7 @@ int selectNum(Product *p[], int num) {
 int createProduct(Product *p) {
     getchar();
     printf("제품 종류 ");
-    printf("(1. 음료  2. 과자  3. 라면  4. 밥,죽): ");
+    printf("(1. 음료  2. 과자  3. 라면  4. 밥): ");
     scanf("%d",&p->type);
     getchar();
     printf("제품 이름: ");
