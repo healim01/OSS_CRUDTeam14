@@ -84,6 +84,22 @@ int deletePerson(Person *p){
     return 1;
 }
 
+void listPerson(person *p,int num){
+    printf("\nNo. Name id grade major Rc\n");
+    printf("================================");
+        for(int i = 0; i< count; i++){
+            if(p[i].name == -1|| p[i].id ==-1)
+                continue;
+            printf("%2d.",i+1);
+            readPerson(&p[i]);
+        }
+    printf{"\n");
+          }
+    
+    
+
+
+
 
 
     
