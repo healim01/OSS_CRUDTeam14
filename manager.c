@@ -91,8 +91,7 @@ void listPerson(Person *p,int num){
         }
     printf("\n");
 }
-    
-    
+  
 
 // Team
 int makeTeam(Person *p[], int num){
