@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <time.h>
 #include "manager.h"
 
 // Select
@@ -23,9 +24,9 @@ int selectMenu(){
     return menu;
 }
 
-int selectDatNo(Person *p, int num) {
+int selectDatNo(Person *p[], int num) {
     int no;
-    // listPreson(p, num); -- listPerson 함수 부재로 주석 처리
+    listPerson(p, num);
     printf("번호는 (취소 :0)? ");
     scanf("%d", &no);
     return no;
@@ -33,6 +34,7 @@ int selectDatNo(Person *p, int num) {
 
 // CRUD
 int createPerson(Person *p) {
+
     getchar();
     printf("이름: ");
     fgets(p->name,60,stdin);
@@ -45,18 +47,21 @@ int createPerson(Person *p) {
     fgets(p->major,60,stdin);
     p->major[strlen(p->major)-1] = '\0';
     printf("RC: ");
-    scanf("%s",p->RC);
+    // RC 이름 적기
+    scanf("%d",&p->RC);
     printf("=> 추가 완료!\n");
 
     return 1;
 }
 
 void readPerson(Person *p){
-    printf("\t%s\t%f\t%f\t%s\t%s\n",p->name,p->id,p->grade,p->major,p->RC);
+    printf("\t%s\t%d\t%d\t%s\n",p->name,p->id,p->grade,p->major);
+    // RC 이름 리스트로 가져와서 번호로 출력하기 
 }
 
 
 int updatePerson(Person *p) {
+
     getchar();
     printf("이름: ");
     fgets(p->name,60,stdin);
@@ -69,7 +74,8 @@ int updatePerson(Person *p) {
     fgets(p->major,60,stdin);
     p->major[strlen(p->major)-1] = '\0';
     printf("RC: ");
-    scanf("%s",p->RC);
+    // RC 이름 적기
+    scanf("%d",&p->RC);
     printf("=> 수정 완료!\n");
 
     return 1;
@@ -80,29 +86,32 @@ int deletePerson(Person *p[], int no){
    return 0;
 }
 
-void listPerson(Person *p,int num){
+void listPerson(Person *p[],int num){
     printf("\nNo. Name id grade major Rc\n");
     printf("================================");
-        for(int i = 0; i< num; i++){
-            if(p[i].name == -1|| p[i].id ==-1)
-                continue;
-            printf("%2d.",i+1);
-            readPerson(&p[i]);
-        }
+    for(int i = 0; i< num; i++){
+        if(p[i] == NULL) continue;
+        printf("%2d.",i+1);
+        readPerson(p[i]);
+    }
     printf("\n");
 }
   
 
 // Team
-int makeTeam(Person *p[], int num){
-    // 긱사 물어보기
-    // 몇팀으로 나눌지 구하기
-    // 랜덤 수로 리스트 만들기
-    // 리스트 숫자로 팀 정해주기 
-    int num, count=0;
+int makeTeam(Person *p[], int num) {
+    // 어떤 RC 인지 묻기
+    // 몇팀으로 나눌꺼인지 묻기
+
+    // 해당 RC 몇명인지 카운트 
+    // 카운트 하면서 해당 번호 배열에 집어넣기 
+
+    // 카운트 갯수 / 팀 으로 랜덤값 생성 + 2차원 배열 저장
+    // 배열 내용대로 팀 번호 입력해주기 
+
+    int count=0;
     int RC[100];
-    int grade[5], gNum[5];
-    int team, tNum, rNum[100], k=0;
+    int team, tNum, rNum[10][100], k=0;
 
     srand(time(0));
     printf("어떤 RC의 팀을 선정할까요?\n");
@@ -111,29 +120,36 @@ int makeTeam(Person *p[], int num){
 
     for (int i=0;i<num;i++) {
         if (p[i]->RC == num-1) {
-            grade[p[i]->grade] = i;
-            gNum[p[i]->grade]++;
+            RC[count] = i;
             count++;
         }
     }
-    printf("해당 RC에는 총 %d명이 있습니다. 몇 팀으로 나눌까요?\n");
+    printf("해당 RC에는 총 %d명이 있습니다. 몇 팀으로 나눌까요?\n",count);
     scanf("%d",&team);
 
     for (int i=0;i<team;i++) {
         tNum = count / team;
 
         while (1) {
-            rNum[k] = rand()%count;
+            rNum[i][k] = rand()%count;
             for (int j=0;j<k;j++) {
-                if (rNum[k]==rNum[j]) {
+                if (rNum[i][k]==rNum[i][j]) {
                     k--;
+                    count++;
                     break;
                 }
+                else {
+                    p[RC[rNum[i][k]]]->team = i+1; 
+                }
             }
+            if (k == tNum || count == 0) break;
+            k++;
+            count--;
         }
     }
+
+    listPerson(p,num);
     printf("\n");
-
-
+    return 0;
 }
 
