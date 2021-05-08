@@ -18,7 +18,7 @@ int selectDataNo(Person *p, int num); // 번호 선택
 int createPerson(Person *p); // 명단 추가하기
 void readPerson(Person *p); // 명단 출력하기 
 int updatePerson(Person *p); // 명단 업데이트하기   
-int deletePerson(Person *p); // 명단 삭제하기
+int deletePerson(Person *p[], int no); // 명단 삭제하기
 void listPerson(Person *p,int num); // 명단 리스트 불러오기
 
 // FILE
@@ -33,4 +33,4 @@ void searchmajor(Person *p, int num); // 전공으로 검색
 void searchgrade(Person *p, int num); // 학년으로 검색 
 
 // TEAM
-int makeTeam(Person *p, int num);
+int makeTeam(Person *p[], int num); // 긱사별 팀 선정

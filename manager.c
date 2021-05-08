@@ -51,8 +51,8 @@ int createPerson(Person *p) {
     return 1;
 }
 
-void readPerson(person *p){
-    printf("\t%s\t%f\t%f\t%s\t%s\n",p->Name,p->id,p->grade,p->majaor,p->RC);
+void readPerson(Person *p){
+    printf("\t%s\t%f\t%f\t%s\t%s\n",p->name,p->id,p->grade,p->major,p->RC);
 }
 
 
@@ -75,15 +75,68 @@ int updatePerson(Person *p) {
     return 1;
 };
 
-int deletePerson(Person *p){
-    p->name= -1;
-    p->id= -1;
-    p->grade= -1;
-    p->major= -1;
-    p->RC= -1;
-    return 1;
+int deletePerson(Person *p[], int no){
+   p[no-1] = NULL;
+   return 0;
 }
 
+void listPerson(Person *p,int num){
+    printf("\nNo. Name id grade major Rc\n");
+    printf("================================");
+        for(int i = 0; i< num; i++){
+            if(p[i].name == -1|| p[i].id ==-1)
+                continue;
+            printf("%2d.",i+1);
+            readPerson(&p[i]);
+        }
+    printf("\n");
+}
+    
+    
+
+// Team
+int makeTeam(Person *p[], int num){
+    // 긱사 물어보기
+    // 몇팀으로 나눌지 구하기
+    // 랜덤 수로 리스트 만들기
+    // 리스트 숫자로 팀 정해주기 
+    int num, count=0;
+    int RC[100];
+    int grade[5], gNum[5];
+    int team, tNum, rNum[100], k=0;
+
+    srand(time(0));
+    printf("어떤 RC의 팀을 선정할까요?\n");
+    printf("1. 토레이   2. 벧엘   3. 로뎀   4. 장기려   5. 카이퍼\n");
+    scanf("%d",&num);
+
+    for (int i=0;i<num;i++) {
+        if (p[i]->RC == num-1) {
+            grade[p[i]->grade] = i;
+            gNum[p[i]->grade]++;
+            count++;
+        }
+    }
+    printf("해당 RC에는 총 %d명이 있습니다. 몇 팀으로 나눌까요?\n");
+    scanf("%d",&team);
+
+    for (int i=0;i<team;i++) {
+        tNum = count / team;
+
+        while (1) {
+            rNum[k] = rand()%count;
+            for (int j=0;j<k;j++) {
+                if (rNum[k]==rNum[j]) {
+                    k--;
+                    break;
+                }
+            }
+        }
+    }
+
+
+}
+   
 
 
     
