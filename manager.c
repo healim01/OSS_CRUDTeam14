@@ -133,6 +133,7 @@ int makeTeam(Person *p[], int num){
             }
         }
     }
+    printf("\n");
 
 
 }
