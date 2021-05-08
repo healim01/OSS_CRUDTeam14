@@ -105,7 +105,6 @@ int makeTeam(Person *p[], int num){
     int grade[5], gNum[5];
     int team, tNum, rNum[100], k=0;
 
-<<<<<<< HEAD
     srand(time(0));
     printf("어떤 RC의 팀을 선정할까요?\n");
     printf("1. 토레이   2. 벧엘   3. 로뎀   4. 장기려   5. 카이퍼\n");
@@ -137,28 +136,4 @@ int makeTeam(Person *p[], int num){
 
 
 }
-   
-=======
-void listPerson(person *p,int num){
-    printf("\nNo. Name id grade major Rc\n");
-    printf("================================");
-        for(int i = 0; i< count; i++){
-            if(p[i].name == -1|| p[i].id ==-1)
-                continue;
-            printf("%2d.",i+1);
-            readPerson(&p[i]);
-        }
-    printf{"\n");
-          }
-    
-    
-
-
-
->>>>>>> 241b4d5a089d2c6c97204c68ec4470fd961f2000
-
-
-    
-
-
 
