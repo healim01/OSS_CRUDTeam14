@@ -29,3 +29,42 @@ int selectDatNo(Product *p[], int num) {
     scanf("%d", &no);
     return no;
 }
+
+// CRUD
+int createProduct(Product *p) {
+    getchar();
+    printf("제품 종류  ");
+    printf(" ( 1. 음료  2. 과자  3. 라면  4. 밥,죽 ): \n");
+    scanf("%d",&p->type);
+    printf("제품 이름: ");
+    fgets(p->name,60,stdin);
+    p->name[strlen(p->name)-1] = '\0';
+    printf("제품 가격: ");
+    scanf("%d",&p->price);
+    printf("제품 무게: ");
+    scanf("%d",&p->wight);
+    printf("제품 재고 개수: ");
+    scanf("%s",p->count);
+    printf("=> 추가 완료!\n");
+
+    return 1;
+}
+
+int updateProduct(Product *p) {
+    getchar();
+    printf("제품 종류  ");
+    printf(" ( 1. 음료  2. 과자  3. 라면  4. 밥,죽 ): \n");
+    scanf("%d",&p->type);
+    printf("제품 이름: ");
+    fgets(p->name,60,stdin);
+    p->name[strlen(p->name)-1] = '\0';
+    printf("제품 가격: ");
+    scanf("%d",&p->price);
+    printf("제품 무게: ");
+    scanf("%d",&p->wight);
+    printf("제품 재고 개수: ");
+    scanf("%s",p->count);
+    printf("=> 수정 완료!\n");
+
+    return 1;
+}
