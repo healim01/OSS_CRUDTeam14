@@ -3,7 +3,6 @@
 
 함수 설명
 --------
-
 typedef struct{ <br>
     int type; // 제품 종류 ( 1. 음료  2. 과자  3. 라면  4. 밥,죽 ) <br>
 	char name[60]; // 제품 이름 <br>
@@ -11,7 +10,7 @@ typedef struct{ <br>
 	int wight; // 제품 무게 <br>
     int count; // 제품 개수 <br>
 } Product; <br>
-
+-> struct 함수를 통해 각 제품의 종류와 이름 가격과 무게를 저장한다. 
 
 int selectMenu();<br>
 <img width="257" alt="스크린샷 2021-05-09 오후 4 40 03" src="https://user-images.githubusercontent.com/79801529/117564190-d7d51f00-b0e5-11eb-80e2-03feae0e2299.png"> <br>
@@ -23,7 +22,11 @@ int updateProduct(Product *p); <br>
 <img width="426" alt="스크린샷 2021-05-09 오후 4 49 01" src="https://user-images.githubusercontent.com/79801529/117564345-8d07d700-b0e6-11eb-8170-eabb0807cb45.png">
 
 void listProduct(Product *p[],int num); <br>
-
+-> 현재 편의점에 있는 상품들의 목록,재고, 무게,를 보여준다. 
 
 void managerStore(Product *p[], int num); <br>
 ![image](https://user-images.githubusercontent.com/74346290/117570368-c5b6a900-b104-11eb-8b83-4bbb657b05a4.png)
+-> 현재 편의점에 있는 남은 재고의 모습을 보여준다. 
+
+int deleteProduct(Product *p[], int no){
+-> 해당 물품을 제거한다.  
