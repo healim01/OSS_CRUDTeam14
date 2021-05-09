@@ -57,7 +57,6 @@ void readProduct(Product p){
 }
 
 
-
 int updateProduct(Product *p) {
     getchar();
     printf("제품 종류  ");
@@ -83,15 +82,17 @@ int deleteProduct(Product *p[], int no){
     return 1;
 }
 
+
 void listProduct(Product *p[],int num) {
     printf("*******************************\n");
     for (int i=0; i<num; i++) {
-        //if(p[i] == NULL) continue;
+        if(p[i] == NULL) continue;
         printf("%d. ",i+1);
-        //readProduct(*p[i]);
+        readProduct(*p[i]);
     }
     printf("\n");
 }
+
 
 void managerStore(Product *p[], int num) {
     printf("===============\n");
