@@ -53,7 +53,7 @@ int createProduct(Product *p) {
 
 
 void readProduct(Product s){
-    printf("\t%s\t%s\t%d\t%d\t",s.type,s,name,s.price,s.wight,s.count);
+    printf("\t%s\t%s\t%d\t%d\t",s.type,s.name,s.price,s.wight,s.count);
 }
 
 
@@ -78,12 +78,8 @@ int updateProduct(Product *p) {
     return 1;
 }
 
-int deleteProduct(Product *p){
-    p->type= -1;
-    P->name= -1;
-    P->price= -1;
-    P->wight= -1;
-    P->count= -1; 
+int deleteProduct(Product *p[], int no){
+    p[no-1] = NULL;
     return 1;
 }
 
