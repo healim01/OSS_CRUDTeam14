@@ -53,7 +53,11 @@ int createProduct(Product *p) {
 
 
 void readProduct(Product p){
-    printf("\t%s\t%s\t%d\t%d\t%d\n",p.type,p.name,p.price,p.wight,p.count);
+    if (p.type == 1) printf("\t음료\t");
+    else if (p.type == 2) printf("\t과자\t");
+    else if (p.type == 3) printf("\t라면\t");
+    else if (p.type == 4) printf("\t밥,죽\t");
+    printf("%s\t%d\t%d\t%d\n",p.name,p.price,p.wight,p.count);
 }
 
 
@@ -84,7 +88,7 @@ int deleteProduct(Product *p[], int no){
 
 
 void listProduct(Product *p[],int num) {
-    printf("*******************************\n");
+    printf("*******************************************\n");
     for (int i=0; i<num; i++) {
         if(p[i] == NULL) continue;
         printf("%d. ",i+1);
