@@ -51,13 +51,6 @@ int createProduct(Product *p) {
     return 1;
 }
 
-
-void readProduct(Product s){
-    printf("\t%s\t%s\t%d\t%d\t",s.type,s,name,s.price,s.wight,s.count);
-}
-
-
-
 int updateProduct(Product *p) {
     getchar();
     printf("제품 종류  ");
@@ -75,15 +68,6 @@ int updateProduct(Product *p) {
     scanf("%d",&p->count);
     printf("=> 수정 완료!\n");
 
-    return 1;
-}
-
-int deleteProduct(Product *p){
-    p->type= -1;
-    P->name= -1;
-    P->price= -1;
-    P->wight= -1;
-    P->count= -1; 
     return 1;
 }
 
