@@ -1,22 +1,42 @@
 Mini project 주제
 =================
 
-<img width="659" alt="스크린샷 2021-05-02 오전 12 16 38" src="https://user-images.githubusercontent.com/79801529/116786952-748f2f80-aadc-11eb-949a-86179ef078f7.png">
+편의저 재고 관리 프로그램
 
-한동대 학생 관리 프로그램
---------------------
-
-한동대학교 학교 생활에 필수적인 부분을 관리하는 프로그램으로써 
-학생들의 정보를 통해 1년간 공동체 생활을 할 팀을 정하도록 한다. 뿐만 아니라
-이름,학번,전공,학년별의 각각의 검색 기능을 통해 학생들의 리스트를 확인 한다. 
+한동대학교의 학교 생활 주 필수적 편의시설인 편의점의 재고관리 프로그램으 제작함으로써 재고관리에 좀 더 용이하게 한다. 
 
 Mini project 기능
 
-- 학교 생활함에 있어 필수적인 정보인 이름,학번,학년, 전공, 기숙사를 CRUD 한다.
-- 이러한 정보를 토대로 하여 학생들을 검색을 할 수 있도록 한다. 
-- 기숙사 정보를 이용하여 원하는 팀을 랜덤으로 생성 할 수 있게 한다. 이후 생성된 팀의 리스트를 저장한다. 
+편의점 재고 관리를 위해 종류, 이름,가격,무게,CRUD 한다.
+이러한 정보를 토대로 하여 삭제 및 관리르 할 수 있도록 한다. 
+
+Owner : 최혜림
+Collaborator : 김민기
+Developer : 최혜림
 
 
-* Owner : 최혜림
-* Collaborator : 김민기
-* Developer : 최혜림
+
+함수 설명
+
+typedef struct{
+    int type; // 제품 종류 ( 1. 음료  2. 과자  3. 라면  4. 밥,죽 )
+	char name[60]; // 제품 이름
+	int price; // 제품 가격
+	int wight; // 제품 무게 
+    int count; // 제품 개수
+} Product;
+
+
+int selectMenu(){
+<img width="257" alt="스크린샷 2021-05-09 오후 4 40 03" src="https://user-images.githubusercontent.com/79801529/117564190-d7d51f00-b0e5-11eb-80e2-03feae0e2299.png">
+
+
+int createProduct(Product *p) {
+
+int updateProduct(Product *p) {
+<img width="426" alt="스크린샷 2021-05-09 오후 4 49 01" src="https://user-images.githubusercontent.com/79801529/117564345-8d07d700-b0e6-11eb-8170-eabb0807cb45.png">
+
+
+void listProduct(Product *p[],int num) {
+
+void managerStore(Product *p[], int num) {
