@@ -53,7 +53,7 @@ int createProduct(Product *p) {
 
 
 void readProduct(Product p){
-    printf("\t%d\t%s\t%d\t%d\t",p.type,p.name,p.price,p.wight,p.count);
+    printf("\t%d\t%s\t%d\t%d\t%d\t",p.type,p.name,p.price,p.wight,p.count);
 }
 
 
