@@ -25,6 +25,8 @@ int updateProduct(Product *p); <br>
 -> 기존에 있던 재고와 다르게 상품을 새로 추가하기 위한 함수이다. 
 
 void listProduct(Product *p[],int num); <br>
+<img width="403" alt="스크린샷 2021-05-09 오후 9 08 05" src="https://user-images.githubusercontent.com/79801529/117571719-b5093180-b10a-11eb-9664-d3f8abb61c62.png">
+
 -> 현재 편의점에 있는 상품들의 목록,재고, 무게,를 보여준다. 
 
 void managerStore(Product *p[], int num); <br>
@@ -32,4 +34,5 @@ void managerStore(Product *p[], int num); <br>
 -> 현재 편의점에 있는 남은 재고의 모습을 보여준다. 
 
 int deleteProduct(Product *p[], int no){
+<img width="372" alt="스크린샷 2021-05-09 오후 9 04 00" src="https://user-images.githubusercontent.com/79801529/117571590-28f70a00-b10a-11eb-9c1d-54ca7643b9fb.png">
 -> 해당 물품을 제거한다.  
