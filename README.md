@@ -12,6 +12,6 @@ Mini project 기능
 편의점 재고 관리를 위해 종류, 이름,가격,무게,CRUD 한다.
 이러한 정보를 토대로 하여 삭제 및 관리르 할 수 있도록 한다. 
 
-Owner : 최혜림
-Collaborator : 김민기
-Developer : 최혜림
+Owner : 최혜림 <br>
+Collaborator : 김민기 <br>
+Developer : 최혜림, 김민기 <br>
