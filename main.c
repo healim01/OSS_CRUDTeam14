@@ -10,7 +10,7 @@ int main(){
     int num = 0;
     int no ,del;
 
-    // num = loadData(p);  -- load 함수 부재로 주석 처리 
+    // num = loadData(p); 
     if (num == 0) printf("=> 파일 없음\n");
     else printf("=> 로딩 성공!\n");
     while (1){
@@ -50,7 +50,7 @@ int main(){
         else if (menu == 5) {
             if (num == 0 ) printf("데이터가 없습니다.\n");
             else saveData(p,num);
-        } /*
+        } 
         else if (menu == 6) {
             if (num == 0 ) printf("데이터가 없습니다.\n");
             else searchName(p,num);
@@ -62,7 +62,7 @@ int main(){
         else if (menu == 8) {
             if (num == 0 ) printf("데이터가 없습니다.\n");
             else searchPrice(p,num);
-        } */
+        } 
         else if (menu ==9) {
             if (num == 0 ) printf("데이터가 없습니다.\n");
             else managerStore(p,num);

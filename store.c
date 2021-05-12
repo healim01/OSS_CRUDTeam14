@@ -43,7 +43,7 @@ int createProduct(Product *p) {
     printf("제품 가격: ");
     scanf("%d",&p->price);
     printf("제품 무게: ");
-    scanf("%d",&p->wight);
+    scanf("%d",&p->weight);
     printf("제품 재고 개수: ");
     scanf("%d",&p->count);
     printf("=> 추가 완료!\n");
@@ -56,8 +56,8 @@ void readProduct(Product p){
     if (p.type == 1) printf("  음료  |");
     else if (p.type == 2) printf("  과자  |");
     else if (p.type == 3) printf("  라면  |");
-    else if (p.type == 4) printf("   밥  |");
-    printf("  %s  |  %d원  |  %dg  |  %d개\n",p.name,p.price,p.wight,p.count);
+    else if (p.type == 4) printf("    밥  |");
+    printf("  %s  |  %d원  |  %dg  |  %d개\n",p.name,p.price,p.weight,p.count);
 }
 
 
@@ -73,7 +73,7 @@ int updateProduct(Product *p) {
     printf("제품 가격: ");
     scanf("%d",&p->price);
     printf("제품 무게: ");
-    scanf("%d",&p->wight);
+    scanf("%d",&p->weight);
     printf("제품 재고 개수: ");
     scanf("%d",&p->count);
     printf("=> 수정 완료!\n");
@@ -128,20 +128,61 @@ void saveData(Product *p[], int count) {
         }
         else {
             num[3]++;
-            fprintf(file,"   밥  |");
+            fprintf(file,"    밥  |");
         }
-        fprintf(file,"  %s  |  %d원  |  %dg  |  %d개\n",p[i]->name,p[i]->price,p[i]->wight,p[i]->count);
+        fprintf(file,"  %s  |  %d원  |  %dg  |  %d개\n",p[i]->name,p[i]->price,p[i]->weight,p[i]->count);
     }
 
     fprintf(file,"\n3. 종류별 제품 갯수\n");
     fprintf(file,"\t음료 : %d종류  과자 : %d종류  라면 : %d종류  밥 : %d종류\n",num[0],num[1],num[2],num[3]);
 
-    printf("=> 저장 완료!");
+    printf("=> 저장 완료!\n");
     fclose(file);
 }
 
+// Search
+void searchName(Product *p[], int num) {
+    char pro[20];
+    int yn = 0;
+    printf("검색할 제품은? ");
+    scanf("%s",pro);
+    for (int i=0;i<num;i++) {
+        if (strstr(p[i]->name,pro)!=0) {
+            readProduct(*p[i]);
+            yn = 1;
+        }
+        else if (i == num-1 && yn == 0) printf("검색 결과가 없습니다.\n");
+    }
+}
+
+void searchType(Product *p[], int num) {
+    int ty, yn = 0;
+    printf("검색할 제품의 종류는? (1. 음료  2. 과자  3. 라면  4. 밥)");
+    scanf("%d",&ty);
+    for (int i=0;i<num;i++) {
+        if (p[i]->type == ty) { 
+            readProduct(*p[i]);
+            yn = 1;
+        }
+        else if (i == num-1 && yn == 0) printf("검색 결과가 없습니다.\n");
+    }
+}
+
+void searchPrice(Product *p[], int num) {
+    int money, yn = 0;
+    printf("검색할 제품의 가격대는? (천원 단위) ");
+    scanf("%d",&money);
+    for (int i=0;i<num;i++) {
+        if ((p[i]->price >= money) && (p[i]->price < money+1000)) {
+            readProduct(*p[i]);
+            yn = 1;
+        }
+        else if (i == num-1 && yn == 0) printf("검색 결과가 없습니다.\n");
+    }
+}
 
 
+// Manager
 void managerStore(Product *p[], int num) {
     printf("===============\n");
     printf("남은 재고\n");

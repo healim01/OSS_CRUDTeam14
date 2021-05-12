@@ -5,7 +5,7 @@ typedef struct{
     int type; // 제품 종류 ( 1. 음료  2. 과자  3. 라면  4. 밥 )
 	char name[60]; // 제품 이름
 	int price; // 제품 가격
-	int wight; // 제품 무게 
+	int weight; // 제품 무게 
     int count; // 제품 개수
 } Product;
 
