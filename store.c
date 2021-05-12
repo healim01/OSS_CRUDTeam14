@@ -99,7 +99,15 @@ void listProduct(Product *p[],int num) {
 
 // File
 void saveData(Product *p[], int count) {
-    
+    FILE * file;
+    file = fopen("store.txt","w");
+
+    fprintf(file,"전체 편의점 물품 정보\n");
+
+    fprintf(file,"1. 전체 편의점 물품 갯수\n");
+    fprintf(file,"총 %d가지\n",count);
+
+
 }
 
 
