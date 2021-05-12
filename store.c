@@ -97,6 +97,12 @@ void listProduct(Product *p[],int num) {
     printf("\n");
 }
 
+// File
+void saveData(Product *p[], int count) {
+    
+}
+
+
 
 void managerStore(Product *p[], int num) {
     printf("===============\n");
