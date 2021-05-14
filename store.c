@@ -57,7 +57,9 @@ void readProduct(Product p){
     else if (p.type == 2) printf("  과자  |");
     else if (p.type == 3) printf("  라면  |");
     else if (p.type == 4) printf("    밥  |");
-    printf("  %s  |  %d원  |  %dg  |  %d개\n",p.name,p.price,p.weight,p.count);
+    printf("  %s  |  %d 원  |",p.name,p.price);
+    if (p.type == 1) printf("  %d ml  |  %d 개\n",p.weight,p.count);
+    else printf("  %d g  |  %d 개\n",p.weight,p.count);
 }
 
 
@@ -89,7 +91,7 @@ int deleteProduct(Product *p[], int no){
 
 void listProduct(Product *p[],int num) {
     printf(" 번호 | 종류 |   제품명   |  가격  |  무게  |  재고 개수\n");
-    printf("---------------------------------------------------\n");
+    printf("---------------------------------------------------------\n");
     for (int i=0; i<num; i++) {
         if(p[i] == NULL) continue;
         printf("%2d  |",i+1);
@@ -104,14 +106,14 @@ void saveData(Product *p[], int count) {
     FILE * file;
     file = fopen("store.txt","w");
 
-    fprintf(file,"전체 편의점 정보\n");
+    fprintf(file,"*** 전체 편의점 정보 ***\n");
 
     fprintf(file,"\n1. 전체 편의점 제품 갯수\n");
     fprintf(file,"\t총 %d가지\n",count);
 
     fprintf(file,"\n2. 전체 편의점 물품 정보\n");
     fprintf(file," 번호 |  종류  |   제품명   |  가격  |  무게  |  재고 개수\n");
-    fprintf(file,"---------------------------------------------------\n");
+    fprintf(file,"-------------------------------------------------------\n");
     for (int i=0; i<count; i++) {
         fprintf(file,"%2d  |",i+1);
         if (p[i]->type == 1) {
@@ -130,23 +132,33 @@ void saveData(Product *p[], int count) {
             num[3]++;
             fprintf(file,"    밥  |");
         }
-        fprintf(file,"  %s  |  %d원  |  %dg  |  %d개\n",p[i]->name,p[i]->price,p[i]->weight,p[i]->count);
+        fprintf(file,"  %s  |  %d 원  |",p[i]->name,p[i]->price);
+        if (p[i]->type == 1) fprintf(file,"  %d ml |  %d 개\n",p[i]->weight,p[i]->count);
+        else fprintf(file,"  %d g  |  %d 개\n",p[i]->weight,p[i]->count);
     }
 
     fprintf(file,"\n3. 종류별 제품 갯수\n");
-    fprintf(file,"\t음료 : %d종류  과자 : %d종류  라면 : %d종류  밥 : %d종류\n",num[0],num[1],num[2],num[3]);
+    fprintf(file,"\t음료 : %d 종류  과자 : %d 종류  라면 : %d 종류  밥 : %d 종류\n",num[0],num[1],num[2],num[3]);
 
     printf("=> 저장 완료!\n");
     fclose(file);
 }
 
-int loadData(Product *p[]){ 
-	int count=0;
-	FILE*fp;
 
-	printf("=> 로딩 성공!\n");
-	return count;
+int loadData(Product *p[]) {
+    int i=0;
+    FILE * file;
+    if ((file = fopen("product.txt","r"))) {
+        while (!feof(file)) {
+            p[i] = (Product *)malloc(sizeof(Product));
+            fscanf(file,"%d %s %d %d %d \n",&p[i]->type,p[i]->name,&p[i]->price,&p[i]->weight,&p[i]->count);
+            i++;
+        }
+        fclose(file);
+    }
+    return i;
 }
+
 // Search
 void searchName(Product *p[], int num) {
     char pro[20];

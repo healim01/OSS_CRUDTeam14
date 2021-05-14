@@ -10,7 +10,7 @@ int main(){
     int num = 0;
     int no ,del;
 
-    // num = loadData(p); 
+    num = loadData(p); 
     if (num == 0) printf("=> 파일 없음\n");
     else printf("=> 로딩 성공!\n");
     while (1){
