@@ -140,6 +140,13 @@ void saveData(Product *p[], int count) {
     fclose(file);
 }
 
+int loadData(Product *p[]){ 
+	int count=0;
+	FILE*fp;
+
+	printf("=> 로딩 성공!\n");
+	return count;
+}
 // Search
 void searchName(Product *p[], int num) {
     char pro[20];
