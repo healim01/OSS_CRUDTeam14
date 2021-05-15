@@ -189,7 +189,7 @@ void searchType(Product *p[], int num) {
 
 void searchPrice(Product *p[], int num) {
     int money, yn = 0;
-    printf("검색할 제품의 가격대는? (천원 단위) ");
+    printf("검색할 제품의 가격대는? (오천원 단위) ");
     scanf("%d",&money);
     for (int i=0;i<num;i++) {
         if ((p[i]->price >= money) && (p[i]->price < money+5000)) {
