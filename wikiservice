@@ -1,0 +1,84 @@
+1. 서비스 
+
+ -> 서비스 가이드
+
+  (1) 서비스개요
+ 편의점 점장님 혹은 알바생들의 모든 고민인 재고관리 특히 물건이 3번 들어오는 한동대학교에서는 
+ 매우 복잡할 수 있습니다. 이제 그럴 땐 CRUD_14팀이 만든 편의점 재고관리 프로그램을 사용하여보세요! 물품들의 종류 정리! 물품들의 이름과 무게!를 저장하여 현재 편의점안에 있는 물품을 알 수 있습니다! 
+
+  (2) 서비스 기획의도
+ 편의점은 한동대학교의 빼 놓을 수 없는 편의시설로써 밥, 카페등의 다양한 의미를 가지는 시설이다.
+ 이러한 편의점에서 가장 중요한 것은 상품들의 재고관리일 것이다. 
+ 이번 OSS MINI Project에서는 이러한 편의점 재고관리의 프로그램을 구현함으로써 재고관리의 편의성을 높이려고 하였다. 
+
+ (3) 플로우 차트
+ <img width="413" alt="Pasted Graphic 1" src="https://user-images.githubusercontent.com/79801529/118387475-ad411400-b659-11eb-8483-6c7cd6582e3b.png">
+
+ (4) 기대효과
+   1. 종류별 상품을 재고관리를 통해 종류를 확인 가능
+   2. 가격검색을 통해 재고관리의 편의성 확장
+   3. 다양한 상품의 추가를 통해 많은 물품을 관리 가능 
+
+ -> 사용가이드 
+   1. 사용설명
+   1) 메뉴
+   <img width="530" alt="Convenience Store" src="https://user-images.githubusercontent.com/79801529/118387768-402e7e00-b65b-11eb-9956-c169ab9c1b2c.png">
+    -> 편의점 재고관리 프로그램의 메뉴로 종료를 포함하여 선택 사항이 10가지의 메뉴로 구성되어있다
+
+
+   2) 추가&수정
+   <img width="426" alt="Pasted Graphic 4" src="https://user-images.githubusercontent.com/79801529/118387780-4fadc700-b65b-11eb-87ab-25938efd9ba4.png">
+   -> 하나의 상품에 대한 종류/이름/가격/무게/재고에 대하여 추가하고 저장한다. 
+
+   <img width="501" alt="Pasted Graphic 5" src="https://user-images.githubusercontent.com/79801529/118387785-5b00f280-b65b-11eb-9b10-327d75fa67fe.png">
+   -> 상품에 대해서 종류/이름/가격/무게/재고 개수에 대한 오류가 있을때 수정하여 저장할 수 있다. 
+
+   <img width="464" alt="Pasted Graphic 6" src="https://user-images.githubusercontent.com/79801529/118387792-63592d80-b65b-11eb-9f86-f86cbb931b3f.png">
+   -> 변환결과
+
+   3) 삭제
+   <img width="481" alt="Pasted Graphic 7" src="https://user-images.githubusercontent.com/79801529/118387808-81269280-b65b-11eb-9d17-22c8c9b3cf77.png">
+   -> 하나의 물품에 대하여 삭제할 수 있다. 
+
+   <img width="493" alt="Pasted Graphic 8" src="https://user-images.githubusercontent.com/79801529/118387830-94396280-b65b-11eb-81f7-e67689b7eeaa.png">
+   -> 삭제 결과
+
+   4) 저장
+   <img width="468" alt="Pasted Graphic 9" src="https://user-images.githubusercontent.com/79801529/118387841-a3201500-b65b-11eb-85ea-08aa38a39c2a.png">
+   -> 현재 편의점에 있는 재고들을 저장할 수 있다. 
+
+   <img width="450" alt="Pasted Graphic 10" src="https://user-images.githubusercontent.com/79801529/118387849-b29f5e00-b65b-11eb-87cb-3c374bc41487.png">
+   -> 저장 메뉴 실행결과
+
+   5) 검색 
+   <img width="408" alt="Pasted Graphic 11" src="https://user-images.githubusercontent.com/79801529/118387861-c6e35b00-b65b-11eb-8e12-a049f3337574.png">
+   -> 저장한 이름으로 검색 할 수 있다. 
+
+   <img width="491" alt="Pasted Graphic 12" src="https://user-images.githubusercontent.com/79801529/118387863-c945b500-b65b-11eb-862a-aadb8b298225.png">
+   -> 저장한 종류를 통해 검색 할 수 있다. 
+
+   <img width="418" alt="Pasted Graphic 13" src="https://user-images.githubusercontent.com/79801529/118387865-cc40a580-b65b-11eb-99ea-b39ff8244852.png">
+   -> 저장한 가격대(천원)을 단위로 검색 할 수 있다. 
+
+   6) 재고관리
+   <img width="462" alt="Pasted Graphic 14" src="https://user-images.githubusercontent.com/79801529/118387870-cf3b9600-b65b-11eb-8952-32bf0279fb3d.png">
+   현재 편의점 재고관리 프로그램에 저장한 프로그램에서 재고를 확인 할 수 있다. 
+
+   7) 종료
+   <img width="382" alt="Convenience Store" src="https://user-images.githubusercontent.com/79801529/118387874-d1055980-b65b-11eb-95fe-ed30980b6dca.png">
+
+
+
+ -> 기술상세
+  1. 사용기술 스택
+   * C
+   * Makefile
+
+  2. 협업도구
+   * Gitgub
+   * Zoom
+   * Replit
+
+  3. IDE
+   * Visual Studio Code
+
