@@ -1,0 +1,116 @@
+ 2. 협업
+ -> 임무 교환
+ 1. CRUD 역할 분담
+   김민기
+   void readPerson(Person *p); // 명단 출력하기
+   int deletePerson(Person *p); // 명단 삭제하기
+   void listPerson(Person *p,int num); // 명단 리스트 불러오기
+
+   최혜림
+ 	int createPerson(Person *p); // 명단 추가하기
+ 	int updatePerson(Person *p); // 명단 업데이트하기
+
+ 2. SELCT역할 분담
+   최혜림
+   int selectMenu(); // 메뉴 선택
+   int selectDataNo(Person *p, int num); 
+
+ 3. TEAM
+   최혜림
+   int makeTeam(Person *p[], int num)
+
+ 4. Search 함수 구현 
+   최혜림  
+   void searchName(Product *p[], int num); // 이름으로 검색
+   void searchType(Product *p[], int num); // 종류로 검색
+   void searchPrice(Product *p[], int num); // 가격으로 검색
+
+ 5. FIle 함수 구현 
+   김민기 & 최혜림
+ 	void saveData(Product *p[], int count); // 데이타 파일 저장하기
+   int loadData(Product *p[]); // 데이타 읽어오기
+
+ 6. WIKI 작성
+   김민기
+
+
+ -> 개발 일지
+  1. 각 함수 담당자 및 개발 일정
+
+ 2021-05-07(금) - 회의
+ -> 주제선정
+ 	한동대학생 학생 관리 프로그램 선정 
+
+ -> 개발일지
+ 최혜림
+ int selectMenu(); // 메뉴 선택 -- 05.07.
+ int selectDataNo(Person *p, int num); -- 05.08
+ int createPerson(Person *p); // 명단 추가하기 -- 05.08
+ int createPerson(Person *p); // 명단 추가하기 -- 05.08
+
+ 김민기
+ void readPerson(Person *p); // 명단 출력하기  — 5/8
+ int deletePerson(Person *p); // 명단 삭제하기 — 5/8
+ void listPerson(Person *p,int num); // 명단 리스트 불러오기 — 5/8
+
+ 2021-05-08(토) - 회의
+ -> 주제 변경
+ 한동대학교 학생관리 프로그램의 이용자의 대상이 애매하다는 판단이 들어 최혜림 학부생 수정 제안
+ 회의 끝에 편의점 재고관리 프로그램을 제작하기로 결정 
+
+ -> 개발일지
+ 	-> 편의점 재고관리 프로그램의 Wiki작성
+
+
+ 2021-05-11(화) - 회의
+ -> 개발일지
+
+ 편의점 재고관리 프로그램 CRUD 구현이후 search 함수 . File 함수 구현 
+ 최혜림
+ void searchName(Product *p[], int num); // 이름으로 검색 - 5/13
+ void searchType(Product *p[], int num); // 종류로 검색 - 5/13
+ void searchPrice(Product *p[], int num); // 가격으로 검색 - 5/13
+
+ 김민기&최혜림
+ void saveData(Product *p[], int count); // 데이타 파일 저장하기- 5/13
+ int loadData(Product *p[]); // 데이타 읽어오기- 5/14
+
+ 2021-05-16(일) - 회의
+
+ -> 개발일지
+ 최혜림 &김민기 
+ 편의점 재고관리 함수 구현완료
+
+ -> 그 외 
+ 김민기 
+ 16일 Wiki작성 
+
+
+  2. 각 함수의 기능에 대한 설명 
+ // CRUD
+ int createProduct(Product *p); // 제품 추가하기
+ void readProduct(Product p); // 제품 읽어오기
+ int updateProduct(Product *p); // 제품 수정하기   
+ int deleteProduct(Product *p[], int no); // 제품 삭제하기       
+ void listProduct(Product *p[],int num); // 제품 리스트 가져오기
+
+ => CRUD는 Create(생성), Read(읽기), Update(갱신), Delete(삭제)를 묶어서 일컫는 말이다. 
+ 이 함수들은 편의점 재고 관리 프로그램에서 상품의 관리를 위한 함수이다. 
+
+
+ // FILE
+ void saveData(Product *p[], int count); // 데이타 파일 저장하기 
+ int loadData(Product *p[]); // 데이타 읽어오기
+
+ // SEARCH
+ void searchName(Product *p[], int num); // 이름으로 검색
+ void searchType(Product *p[], int num); // 종류로 검색
+ void searchPrice(Product *p[], int num); // 가격으로 검색 
+
+ => SEARCH함수들은 편의점 재고관리프로그램에 저장되어있는 물품들을 검색하기 위한 프로그램이다.
+ 검색의 다양성을 위해 이름,종류,가격으로 검색을 할 수 있도록 하였다. 
+
+ // MANAGER
+ void managerStore(Product *p[],int num); // 재고 관리 
+ => 현재 편의점 안에 있는 물품들에 대한 전체적 재고 관리를 위한 함수이다.
+
