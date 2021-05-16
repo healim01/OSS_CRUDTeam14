@@ -3,7 +3,7 @@ Mini project 주제
 편의점 재고 관리 프로그램
 -------------------
 
-![](<https://wassupkorea1218.files.wordpress.com/2018/04/ed8eb8ec9d98eca090-eba19ceab3a0.png?w=488>)
+![최혜림과제](https://user-images.githubusercontent.com/74346290/118390190-bbe2f780-b668-11eb-812b-f28890e4a3fb.png)
 
 한동대학교의 학교 생활 주 필수적 편의시설인 편의점의 재고관리 프로그램을 제작함으로써 재고관리에 좀 더 용이하게 한다. 
 
