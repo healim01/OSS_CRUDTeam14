@@ -1,0 +1,210 @@
+1. 서비스 
+
+-> 서비스 가이드
+
+ (1) 서비스개요
+편의점 점장님 혹은 알바생들의 모든 고민인 재고관리 특히 물건이 3번 들어오는 한동대학교에서는 
+매우 복잡할 수 있습니다. 이제 그럴 땐 CRUD_14팀이 만든 편의점 재고관리 프로그램을 사용하여보세요! 물품들의 종류 정리! 물품들의 이름과 무게!를 저장하여 현재 편의점안에 있는 물품을 알 수 있습니다! 
+
+ (2) 서비스 기획의도
+편의점은 한동대학교의 빼 놓을 수 없는 편의시설로써 밥, 카페등의 다양한 의미를 가지는 시설이다.
+이러한 편의점에서 가장 중요한 것은 상품들의 재고관리일 것이다. 
+이번 OSS MINI Project에서는 이러한 편의점 재고관리의 프로그램을 구현함으로써 재고관리의 편의성을 높이려고 하였다. 
+
+(3) 플로우 차트
+<img width="413" alt="Pasted Graphic 1" src="https://user-images.githubusercontent.com/79801529/118387475-ad411400-b659-11eb-8483-6c7cd6582e3b.png">
+
+(4) 기대효과
+  1. 종류별 상품을 재고관리를 통해 종류를 확인 가능
+  2. 가격검색을 통해 재고관리의 편의성 확장
+  3. 다양한 상품의 추가를 통해 많은 물품을 관리 가능 
+  
+-> 사용가이드 
+  1. 사용설명
+  1) 메뉴
+  <img width="530" alt="Convenience Store" src="https://user-images.githubusercontent.com/79801529/118387768-402e7e00-b65b-11eb-9956-c169ab9c1b2c.png">
+   -> 편의점 재고관리 프로그램의 메뉴로 종료를 포함하여 선택 사항이 10가지의 메뉴로 구성되어있다
+   
+   
+  2) 추가&수정
+  <img width="426" alt="Pasted Graphic 4" src="https://user-images.githubusercontent.com/79801529/118387780-4fadc700-b65b-11eb-87ab-25938efd9ba4.png">
+  -> 하나의 상품에 대한 종류/이름/가격/무게/재고에 대하여 추가하고 저장한다. 
+  
+  <img width="501" alt="Pasted Graphic 5" src="https://user-images.githubusercontent.com/79801529/118387785-5b00f280-b65b-11eb-9b10-327d75fa67fe.png">
+  -> 상품에 대해서 종류/이름/가격/무게/재고 개수에 대한 오류가 있을때 수정하여 저장할 수 있다. 
+  
+  <img width="464" alt="Pasted Graphic 6" src="https://user-images.githubusercontent.com/79801529/118387792-63592d80-b65b-11eb-9f86-f86cbb931b3f.png">
+  -> 변환결과
+  
+  3) 삭제
+  <img width="481" alt="Pasted Graphic 7" src="https://user-images.githubusercontent.com/79801529/118387808-81269280-b65b-11eb-9d17-22c8c9b3cf77.png">
+  -> 하나의 물품에 대하여 삭제할 수 있다. 
+  
+  <img width="493" alt="Pasted Graphic 8" src="https://user-images.githubusercontent.com/79801529/118387830-94396280-b65b-11eb-81f7-e67689b7eeaa.png">
+  -> 삭제 결과
+  
+  4) 저장
+  <img width="468" alt="Pasted Graphic 9" src="https://user-images.githubusercontent.com/79801529/118387841-a3201500-b65b-11eb-85ea-08aa38a39c2a.png">
+  -> 현재 편의점에 있는 재고들을 저장할 수 있다. 
+  
+  <img width="450" alt="Pasted Graphic 10" src="https://user-images.githubusercontent.com/79801529/118387849-b29f5e00-b65b-11eb-87cb-3c374bc41487.png">
+  -> 저장 메뉴 실행결과
+  
+  5) 검색 
+  <img width="408" alt="Pasted Graphic 11" src="https://user-images.githubusercontent.com/79801529/118387861-c6e35b00-b65b-11eb-8e12-a049f3337574.png">
+  -> 저장한 이름으로 검색 할 수 있다. 
+  
+  <img width="491" alt="Pasted Graphic 12" src="https://user-images.githubusercontent.com/79801529/118387863-c945b500-b65b-11eb-862a-aadb8b298225.png">
+  -> 저장한 종류를 통해 검색 할 수 있다. 
+  
+  <img width="418" alt="Pasted Graphic 13" src="https://user-images.githubusercontent.com/79801529/118387865-cc40a580-b65b-11eb-99ea-b39ff8244852.png">
+  -> 저장한 가격대(천원)을 단위로 검색 할 수 있다. 
+  
+  6) 재고관리
+  <img width="462" alt="Pasted Graphic 14" src="https://user-images.githubusercontent.com/79801529/118387870-cf3b9600-b65b-11eb-8952-32bf0279fb3d.png">
+  현재 편의점 재고관리 프로그램에 저장한 프로그램에서 재고를 확인 할 수 있다. 
+  
+  7) 종료
+  <img width="382" alt="Convenience Store" src="https://user-images.githubusercontent.com/79801529/118387874-d1055980-b65b-11eb-95fe-ed30980b6dca.png">
+  
+ 
+  
+-> 기술상세
+ 1. 사용기술 스택
+  * C
+  * Makefile
+
+ 2. 협업도구
+  * Gitgub
+  * Zoom
+  * Replit
+
+ 3. IDE
+  * Visual Studio Code
+  
+  
+  2. 협업
+-> 임무 교환
+1. CRUD 역할 분담
+  김민기
+  void readPerson(Person *p); // 명단 출력하기
+  int deletePerson(Person *p); // 명단 삭제하기
+  void listPerson(Person *p,int num); // 명단 리스트 불러오기
+
+  최혜림
+	int createPerson(Person *p); // 명단 추가하기
+	int updatePerson(Person *p); // 명단 업데이트하기
+  
+2. SELCT역할 분담
+  최혜림
+  int selectMenu(); // 메뉴 선택
+  int selectDataNo(Person *p, int num); 
+
+3. TEAM
+  최혜림
+  int makeTeam(Person *p[], int num)
+
+4. Search 함수 구현 
+  최혜림  
+  void searchName(Product *p[], int num); // 이름으로 검색
+  void searchType(Product *p[], int num); // 종류로 검색
+  void searchPrice(Product *p[], int num); // 가격으로 검색
+
+5. FIle 함수 구현 
+  김민기 & 최혜림
+	void saveData(Product *p[], int count); // 데이타 파일 저장하기
+  int loadData(Product *p[]); // 데이타 읽어오기
+  
+6. WIKI 작성
+  김민기
+
+
+-> 개발 일지
+ 1. 각 함수 담당자 및 개발 일정
+ 
+2021-05-07(금) - 회의
+-> 주제선정
+	한동대학생 학생 관리 프로그램 선정 
+
+-> 개발일지
+최혜림
+int selectMenu(); // 메뉴 선택 -- 05.07.
+int selectDataNo(Person *p, int num); -- 05.08
+int createPerson(Person *p); // 명단 추가하기 -- 05.08
+int createPerson(Person *p); // 명단 추가하기 -- 05.08
+
+김민기
+void readPerson(Person *p); // 명단 출력하기  — 5/8
+int deletePerson(Person *p); // 명단 삭제하기 — 5/8
+void listPerson(Person *p,int num); // 명단 리스트 불러오기 — 5/8
+
+2021-05-08(토) - 회의
+-> 주제 변경
+한동대학교 학생관리 프로그램의 이용자의 대상이 애매하다는 판단이 들어 최혜림 학부생 수정 제안
+회의 끝에 편의점 재고관리 프로그램을 제작하기로 결정 
+
+-> 개발일지
+	-> 편의점 재고관리 프로그램의 Wiki작성
+
+
+2021-05-11(화) - 회의
+-> 개발일지
+
+편의점 재고관리 프로그램 CRUD 구현이후 search 함수 . File 함수 구현 
+최혜림
+void searchName(Product *p[], int num); // 이름으로 검색 - 5/13
+void searchType(Product *p[], int num); // 종류로 검색 - 5/13
+void searchPrice(Product *p[], int num); // 가격으로 검색 - 5/13
+
+김민기&최혜림
+void saveData(Product *p[], int count); // 데이타 파일 저장하기- 5/13
+int loadData(Product *p[]); // 데이타 읽어오기- 5/14
+
+2021-05-16(일) - 회의
+
+-> 개발일지
+최혜림 &김민기 
+편의점 재고관리 함수 구현완료
+
+-> 그 외 
+김민기 
+16일 Wiki작성 
+
+
+ 2. 각 함수의 기능에 대한 설명 
+// CRUD
+int createProduct(Product *p); // 제품 추가하기
+void readProduct(Product p); // 제품 읽어오기
+int updateProduct(Product *p); // 제품 수정하기   
+int deleteProduct(Product *p[], int no); // 제품 삭제하기       
+void listProduct(Product *p[],int num); // 제품 리스트 가져오기
+
+=> CRUD는 Create(생성), Read(읽기), Update(갱신), Delete(삭제)를 묶어서 일컫는 말이다. 
+이 함수들은 편의점 재고 관리 프로그램에서 상품의 관리를 위한 함수이다. 
+
+
+// FILE
+void saveData(Product *p[], int count); // 데이타 파일 저장하기 
+int loadData(Product *p[]); // 데이타 읽어오기
+
+// SEARCH
+void searchName(Product *p[], int num); // 이름으로 검색
+void searchType(Product *p[], int num); // 종류로 검색
+void searchPrice(Product *p[], int num); // 가격으로 검색 
+
+=> SEARCH함수들은 편의점 재고관리프로그램에 저장되어있는 물품들을 검색하기 위한 프로그램이다.
+검색의 다양성을 위해 이름,종류,가격으로 검색을 할 수 있도록 하였다. 
+
+// MANAGER
+void managerStore(Product *p[],int num); // 재고 관리 
+=> 현재 편의점 안에 있는 물품들에 대한 전체적 재고 관리를 위한 함수이다.
+
+
+3. 그외
+최혜림 학부생
+
+김민기 학부생 
+OSS 팀플을 진행 할떄에 수 많은 걱정을 하였다. C함수 구현에 있어서 자신이 있진 않았기 떄문이다. 하지만 최혜림 학우님의 도움을 통해서 할 수 있어서 2주간의 
+괜찮은 팀플을 진행했다고 생각한다. 
+  
+
